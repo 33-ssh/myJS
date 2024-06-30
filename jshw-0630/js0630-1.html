@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 作業1：猜數字
+        /*
+        內定一個數字結果 => let bingoNum = 99
+        彈出輸入視窗，輸入數字
+        最多能夠猜3次
+        --
+        三次內答對，顯示結果如下
+        第1次：11
+        第2次：99
+        答對了
+        --
+        三次內答錯，顯示結果如下
+        第1次：11
+        第2次：88
+        第3次：66
+        挑戰失敗
+        */
+
+        let bingoNum = 99;
+        for (let i = 1; i <= 3; i++) {
+            let result = prompt('請輸入數字');
+            document.write(`第${i}次:${result}<br>`);
+            // 檢查
+            if (result == bingoNum) {
+                document.write('答對了');
+                break;
+            } else {
+                if (i === 3) {
+                    document.write('挑戰失敗');
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
