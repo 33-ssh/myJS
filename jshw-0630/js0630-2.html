@@ -17,14 +17,38 @@
         ****
         *****
         */
-
+        // 1-5的*順向
         for (let i = 1; i <= 5; i++) {
             for (let j = 1; j <= i; j++) {
                 document.write('*');
-            }
+            } //for j
             document.write('<br>');
-        }
+        } //for i
 
+        document.write('<hr>');
+        
+        // 撰寫迴圈避免無窮迴圈(無法結束迴圈)
+        // 5-1的*
+        // 方法一
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write('*');
+            } //for j
+            document.write('<br>');
+        } //for i
+
+        document.write('<hr>');
+        // 5-1的*
+        // 方法二
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 5; j >= i; j--) {
+                document.write('*');
+            } //for j
+            document.write('<br>');
+        } //for i
+
+
+        
     </script>
 </body>
 
