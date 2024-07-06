@@ -23,11 +23,11 @@
         */
         /* 
         */
-        let count = 0  /* 第N次 */
+        let count = 0;  /* 第N次 */
         let pass = 0;  /* 及格人數 */
-        let fail = 0;    /* 不及格人數 */
-        let tot = 0;    /* 總分 */
-        let avg = 0;    /* 總平均 */
+        let fail = 0;  /* 不及格人數 */
+        let tot = 0;   /* 總分 */
+        let avg = 0;   /* 總平均 */
         while (true) { //不需要執行迴圈的條件
             let score = prompt('請輸入分數:');
             // 是否輸入 -1或按了取消
@@ -42,7 +42,7 @@
 
             score = Number(score); //字串轉數值
             // 是否為分數有效範圍 =>0-100
-            if(score<0 || score >100){
+            if (score < 0 || score > 100) {
                 alert('err 分數有效範圍 =>0-100,請重新輸入');
                 continue;
             }
@@ -59,14 +59,15 @@
         }
 
         // console.log('結束了');
+        // shift+空白為轉換全形，下方顯示黃色方框則為全形
         document.write('-------------<br>');
-        document.write(`及格人數: ${pass}人 < br > `);
-        document.write(`不及格人數: ${fail}人 < br > `);
-        document.write(`總分: ${tot}人 < br > `);
+        document.write(`　及格人數: ${pass}人<br>`);
+        document.write(`不及格人數: ${fail}分<br>`);
+        document.write(`總　　　分: ${tot}分<br>`);
         //總平均計算
         avg = tot / (pass + fail); //求平均
         avg = avg.toFixed(2);    //取小數到第二位
-        document.write(`總平均: ${avg}人 < br >`);
+        document.write(`總　平　均: ${avg}分<br>`);
 
     </script>
 </body>
