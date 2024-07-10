@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,4 +79,86 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請顯示1-100，5的倍數並加總
+        // 直到合計大於50就結束迴圈
+        // i=5,tot=5
+        // i=10,tot=15
+        // i=15,tot=30
+        // i=20,tot=50
+        // i=25,tot=75
+
+        // ctrl+d 可以快速選取相同的字進行修改
+
+        // for
+        console.log('----for----');
+        let tot = 0;//宣告變數
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                tot = tot + i;
+                // tot+ =i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break; //結束迴圈
+                }
+            }
+        }
+
+
+        // while
+        console.log('----while----');
+        tot = 0;  //沿用for迴圈時的tot變數，所以tot歸零
+        let i = 1; //重新指派新的值也等於沿用i變數，所以i=1
+        while (i <= 100) {
+            if (i % 5 == 0) {
+                tot = tot + i;
+                // tot+ =i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break; //結束迴圈
+                }
+            }
+            i++; //不管是否為5的倍數都要+1
+        }
+
+
+        // do-while
+        console.log('----do-while----');
+        tot = 0;  //沿用for迴圈時的tot變數，所以tot歸零
+        i = 1;   //沿用i變數，所以=1
+        do { //先執行
+            if (i % 5 == 0) {
+                // tot = tot + i;
+                tot += i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break; //結束迴圈
+                }
+            }
+            i++; //不管是否為5的倍數都要+1
+        } while (i <= 100);
+
+
+
+
+
+
+    </script>
+</body>
+
+>>>>>>> ab78fd5302ee7fdd2413cb1c684252be5e2bdfd3
 </html>

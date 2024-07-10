@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,4 +63,70 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 猜數字：直到猜對才結束
+        // 用亂數產生一個值：60
+        // 輸入資訊顯示console.log()
+        // 第1次：50 => 太小了（提示：50-100）
+        // 第2次：90 => 太大了（提示：50-90）
+        // 第3次：80 => 太大了（提示：50-80）
+        // 第4次：55 => 太小了（提示：55-80）
+        // 第5次：60 => 猜對了
+
+        // console.log(Math.floor(Math.random()*100)); // 回傳 0 ~ 99
+        // console.log(Math.floor(Math.random()*100)+1); // 回傳 1 ~ 100
+        // 產生亂數給變數bingoNum
+        let bingoNum = Math.floor(Math.random() * 100) + 1;
+        // console.log(bingoNum);
+
+
+        let count = 0;  //第n次
+        let max = 100;  
+        let min = 1;    
+
+        while (true) {
+            let intNum = prompt(`請輸入數字(${min}-${max})`);
+
+            if (intNum == null) {
+                console.log('你按了取消');
+                continue;
+            }
+            if (isNaN(intNum)) {
+                console.log('非數值，請重新輸入');
+                continue;
+            }
+            intNum = Number(intNum);
+            if (intNum < min || intNum > max) {
+                console.log(`不在有效的分數範圍，請重新輸入${min}-${max}`);
+                continue;
+            }
+            
+            count++;
+
+            if (intNum == bingoNum) {
+                console.log(`第${count}次: ${intNum} => 猜對了`);
+                break;
+            } else if (intNum < bingoNum) {
+                console.log(`第${count}次: ${intNum} => 太小了（提示: ${intNum}-${max}）`);
+                min = intNum + 1; 
+            } else {
+                console.log(`第${count}次: ${intNum} => 太大了（提示: ${min}-${intNum}）`);
+                max = intNum - 1;
+            }
+        }
+    </script>
+</body>
+
+>>>>>>> ab78fd5302ee7fdd2413cb1c684252be5e2bdfd3
 </html>
