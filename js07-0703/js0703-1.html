@@ -17,8 +17,10 @@
 
         // 1-100中5的倍數和
         // for
-        let tot = 0;
-        for (let i = 1; i <= 100; i++) {
+        let tot = 0; 
+        // let i; 若是不希望是一個不確定變數型態
+        let i =0; //習慣變數提供初始值
+        for (i = 1; i <= 100; i++) {
             if (i % 5 != 0) {
                 continue;
             }
@@ -44,7 +46,7 @@
 
         // do-while
         tot = 0;  //沿用for迴圈時的tot變數，所以tot歸零
-        i = 0;
+        i = 0; 
         console.log('---dowhile---');
         do {
             i++;
