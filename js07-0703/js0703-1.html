@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,74 +66,4 @@
 
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-
-        // 使用continue(忽略下方程式執行)
-        // 當程式執行遇到continue時
-        // continue之後的程式碼都不執行
-        // 直接回到迴圈起始位置
-
-        // 1-100中5的倍數和
-        // for
-        let tot = 0; 
-        // let i; 若是不希望是一個不確定變數型態
-        let i =0; //習慣變數提供初始值
-        for (i = 1; i <= 100; i++) {
-            if (i % 5 != 0) {
-                continue;
-            }
-            tot = tot + i;
-        }
-        console.log('---for---');
-        console.log(`1-100中5的倍數和:${tot}`);
-
-        // while
-        console.log('----while----');
-        tot = 0;  //沿用for迴圈時的tot變數，所以tot歸零
-        i = 0;
-
-        while (i <= 100) {
-            i++;
-            if (i % 5 != 0) {
-                continue;
-            }
-            tot = tot + i;
-        }
-
-        console.log(`1-100中5的倍數和:${tot}`);
-
-        // do-while
-        tot = 0;  //沿用for迴圈時的tot變數，所以tot歸零
-        i = 0; 
-        console.log('---dowhile---');
-        do {
-            i++;
-            if (i % 5 != 0) {
-                continue;
-                console.log(i);
-            }
-            tot = tot + i;
-        } while (i <= 100);
-        console.log(`1-100中5的倍數和:${tot}`);
-
-
-        // 結論
-        // break     => 結束迴圈(或者switch)
-        // continue  => 回到迴圈開始的位置
-    </script>
-
-</body>
-
->>>>>>> ab78fd5302ee7fdd2413cb1c684252be5e2bdfd3
 </html>
