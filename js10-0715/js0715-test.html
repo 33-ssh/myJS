@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 亂數產生大樂透號碼(不重覆)
+
+        let lotto = [];
+
+
+
+        for (let i = 0; lotto.length < 6; i++) {
+            let num = Math.floor((Math.random() * 49) + 1);
+            let result = lotto.includes(num);
+            lotto.push(num);
+        }
+        console.log(lotto);
+    </script>
+</body>
+
+</html>
