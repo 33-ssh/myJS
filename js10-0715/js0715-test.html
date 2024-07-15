@@ -11,16 +11,21 @@
     <script>
         // 亂數產生大樂透號碼(不重覆)
 
-        let lotto = [];
+        let arr1 = [];
 
-
-
-        for (let i = 0; lotto.length < 6; i++) {
+        for (let i = 0; arr1.length < 6; i++) {
             let num = Math.floor((Math.random() * 49) + 1);
-            let result = lotto.includes(num);
-            lotto.push(num);
+            let result = arr1.includes(num);
+            arr1.push(num);
         }
-        console.log(lotto);
+        console.log('排序前'+arr1);
+
+        arr1.sort((a, b) => {
+            return a - b; 
+        });
+        console.log('排序後:' + arr1);
+
+
     </script>
 </body>
 
