@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 亂數產生大樂透號碼(不重覆)
+
+        // 建立函式時機點
+        // 被動執行
+        // function Name () {...}
+        // 立即執行
+        // 匿名函式 => function(){...}
+        // 箭頭函式 => ()=>{...}
+
+        // 建立函式：取亂數(為了可通用，所以傳參數來接收亂數最大值)
+        function getRandNum(max) {
+            return Math.floor(Math.random() * max) + 1;
+        }
+
+        // 大樂透 => 第一區1-49挑6個號碼+第二區1-49挑一個號碼
+        // 威力彩 => 第一區1-38挑6個號碼+第二區1-8挑一個號碼
+        // 今彩539 =>第一區1-39挑5個號碼
+        // item =>樂透代號的其中之一
+        // count =>第一區的號碼次數
+        // no1 =>第一區最大值
+        // no2 =>第二區最大值
+        function getLotNum(item, count, no1, no2 = 0) {
+            let arrNum = [];
+            // 取出第一區:6個號碼(1-49)
+            let i = 0;
+            while (i < count) {
+                // 取亂數
+                let lotNum = getRandNum(no1);
+                // 檢查陣列中是否存在此號碼
+                if (arrNum.indexOf(lotNum) == -1) {
+                    // 沒有重覆，則加入陣列
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前:' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            })
+            console.log('排序後:' + arrNum);
+
+            // 取第二區特別號
+            if (item == '1' || item == '2') {
+                let speNum = getRandNum(no2);
+                console.log('第二區:' + speNum);
+            }
+
+        }
+
+        // 跳脫字元符號 => \n =>換行
+        let lotGameNo = prompt('請輸入樂透號碼代號 =>\n1.大樂透 2.威力彩 3.今彩539');
+        if(lotGameNo == '1') {
+            getLotNum('1',6,49,49);
+        }else  if (lotGameNo == '2') {
+            getLotNum('2',6,38,8);
+        }else if (lotGameNo == '3'){
+            getLotNum('3'5,39);
+        }else {
+            console.log('err!代號輸入錯誤');
+        }
+
+
+
+
+        // if(lotGame=='1'||lotGameNo == '2' || lotGameNo == '3'){
+        //     getLotNum();
+        // }else {
+        //     console.log('err!代號輸入錯誤')
+        // }
+
+
+        // switch (lotGameNo) {
+        //     case '1':
+        //         // 產生大樂透號碼
+        //         getLotNum('1',6,49,49);
+        //         break;
+        //     case '2':
+        //         // 產生威力彩號碼
+        //         getLotNum2('2',6,38,8);
+        //         break;
+        //     case '3':
+        //         // 產生今彩號碼
+        //         getLotNum3('3',5,39);
+        //         break;
+        //     default:
+        //         console.log('err!代號輸入錯誤');
+        //         break;
+        // }
+
+
+    </script>
+</body>
+
+</html>

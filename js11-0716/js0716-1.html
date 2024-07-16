@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 亂數產生大樂透號碼(不重覆)
+
+        // let arr1 = [];
+
+        // for (let i = 0; arr1.length < 6; i++) {
+        //     let num = Math.floor((Math.random() * 49) + 1);
+        //     let result = arr1.includes(num);
+        //     arr1.push(num);
+        // }
+        // console.log('排序前'+arr1);
+
+        // arr1.sort((a, b) => {
+        //     return a - b; 
+        // });
+        // console.log('排序後:' + arr1);
+
+
+
+        //  let arrNum = [];
+        // // 取出第一區:6個號碼(1-49)
+        // 方法一:for
+        // for (let i = 0; i < 6; i++) {
+        //     // 取亂數
+        //     let lotNum = Math.floor(Math.random() * 49) + 1; /* +1是為了避免整數為0的情況 */
+        //     // 檢查陣列中是否存在此號碼
+        //     if (arrNum.indexOf(lotNum) == -1) {
+        //         // 沒有重覆，則加入陣列
+        //         arrNum.push(lotNum);
+        //     } else {
+        //         // 有重覆
+        //         console.log9(`在編號${i}位置，${lotNum}重覆了`);
+        //         i = i - 1; //因為重覆，所以編號位置要-1，不然造成原重覆位置會空掉
+        //     }
+        // }
+        // console.log('排序前' + arrNum);
+        // arrNum.sort((a, b) => {
+        //     return a - b;
+        // })
+        // console.log('排序後' + arrNum);
+
+        // // 取亂數特別號
+        // let speNum = Math.floor(Math.random() * 49) + 1;
+        // console.log('特別號:' + speNum);
+
+
+        // 方法二:while
+        //     let i =0;
+        //     while(i<6) {
+        //         // 取亂數
+        //         let lotNum = Math.floor(Math.random() * 49) + 1; /* +1是為了避免整數為0的情況 */
+        //         // 檢查陣列中是否存在此號碼
+        //         if (arrNum.indexOf(lotNum) == -1) {
+        //             // 沒有重覆，則加入陣列
+        //             arrNum.push(lotNum);
+        //             i++;
+        //         } else {
+        //             // 有重覆
+        //             console.log9(`在編號${i}位置，${lotNum}重覆了`);
+        //             // else 可省略
+        //     }
+        // }
+        //   console.log('排序前' + arrNum);
+        // arrNum.sort((a, b) => {
+        //     return a - b;
+        // })
+        // console.log('排序後' + arrNum);
+
+        // // 取亂數特別號
+        // let speNum = Math.floor(Math.random() * 49) + 1;
+        // console.log('特別號:' + speNum);
+
+
+        // 方法三=>do-while
+        let arrNum = [];
+        let i = 0;
+        do {
+            // 取亂數
+            let lotNum = Math.floor(Math.random() * 49) + 1; /* +1是為了避免整數為0的情況 */
+            // 檢查陣列中是否存在此號碼
+            if (arrNum.indexOf(lotNum) == -1) {
+                // 沒有重覆，則加入陣列
+                arrNum.push(lotNum);
+                i++;
+            }
+        } while (i < 6)
+
+        console.log('排序前' + arrNum);
+        arrNum.sort((a, b) => {
+            return a - b;
+        })
+        console.log('排序後' + arrNum);
+
+        // 取亂數特別號
+        let speNum = Math.floor(Math.random() * 49) + 1;
+        console.log('特別號:' + speNum);
+    </script>
+</body>
+
+</html>

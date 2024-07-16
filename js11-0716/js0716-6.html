@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 物件模組化 =>物件樣板 =>字首大寫
+        // 建立物件樣版 =>Mobile
+        function Mobile(brand, color, size) {
+            this.brand = brand; //等號右邊為上面Mobile括號內的參數；等號左邊為屬性
+            this.color = color;
+            this.size = size;
+            this.showMsg = function () {
+                console.log(`品牌:${this.brand}, 色彩:${this.color},尺寸${this.size}`);
+            }
+        }
+
+        let m1 = new Mobile('iphone','black','14')
+        m1.showMsg();
+        let m2 = new Mobile('samsung','灰黑','13')
+        m2.showMsg();
+    </script>
+</body>
+
+</html>
