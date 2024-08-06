@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 事件基本語法 -->
+    <!-- <div 事件名稱 = "程式碼" >標籤內容</div>-->
+    <!-- <button 事件名稱="程式碼">按鈕內容</button>  -->
+
+    <div onclick="changeP1();">按一下變更段落內容</div>
+    <P>第一段Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis porro impedit vel iure saepe cumque
+        incidunt, rerum odit aliquam. Ad quas at porro dicta optio maxime nesciunt nemo ratione officiis.</P>
+
+    <h2 onclick="changeP2();">標題2</h2>
+    <p id="p2" class="p2">第二段Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quo esse perferendis repudiandae atque cumque
+        quibusdam eligendi quidem culpa dolorum facere quasi ullam nihil, praesentium unde ab, quas modi omnis.</p>
+
+    <script>
+        function changeDiv() {
+            // 變更網頁BODY內容
+            // document.body.innerHTML='HELLO'
+
+            // 變更段落內容
+            // document.querySelector('p').innerHTML='HELLO';
+            // 只取得第一個段落
+            let p1 = document.getElementsByTagName('p');
+            console.log(p1);
+            // 取得所有段落1
+            console.log(document.querySelectorAll('p'));
+            // 取得所有段落2
+            console.log(document.getElementsByTagName('p'));
+
+            // 產生集合陣列物件
+            // document.getElememtarybyTagName('p')[0].innerHTML='Helli'
+
+        }
+
+        // 更改第二個段落
+        function changeP2(){
+            // 取得第二個段落改變段落內容
+            // document
+            // document.getElementsByTagName('p2').innerHTML = '取得id改變段落內容';
+
+
+            //取得id改變段落內容
+            // document.getElemtById('p2'.)
+
+            // 取得class => p1 改變段落內容
+            // console.log(document.getElementsByClassName('p2'));
+            // document.getElementsByClassName('p2')[0].innerHTML = '取得class => p1 改變段落內容';
+            document.querySelector('.p2').innerHTML = '取得class => p1 改變段落內容'
+        }
+    </script>
+
+</body>
+
+</html>

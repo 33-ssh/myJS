@@ -82,11 +82,12 @@
 
 
         // 按下x，刪除對應的li
-        var close = doccument.getElementByClassName('close');
+        var close = document.getElementsByClassName('close');
         //console.log(close)
-        for(i = 0 ; i<close.length;i++) {
-            close[i].onclick = function() {
-                var curli = this.parentNode;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                console.log('1');
+                var curLi = this.parentNode;
                 // 不顯示
                 curLi.style.display = 'none';
                 // curLi.style.color = 'red';
@@ -121,24 +122,20 @@
                 var txt = document.createTextNode("X");
                 span.className = "close";
                 span.appendChild(txt);
-                li.appendChild(span);  
+                li.appendChild(span);
 
                 // let myClose = document.getElementsByTagName('span');
                 // console.log(myClose);
                 // for(let i= 0; i<myClose.length;i++) {
-                    
+
                 // 新增刪除動作
                 span.onclick = function () {
-                    // 函式名稱
-                    delLi();
-                }
-
-                function delLi(){
+                    console.log('2');
                     var curli = this.parentNode;
-                    curli.style.display = 'node';
+                    curli.style.dispaly = 'none';
                 }
 
-                }
+            }
             // 清除文字方塊內容
             document.getElementById("myInput").value = "";
         });
