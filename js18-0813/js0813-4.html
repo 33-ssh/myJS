@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #picL {
+            width: 600px;
+            height: 450px;
+            margin-bottom: 50px;
+        }
+
+        .picS {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .picS img {
+            width: 198px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 縮圖換大圖 -->
+    <div class="wrap">
+        <!-- 大圖 -->
+        <div>
+            <img id="picL" src="../image/IMG_8347.JPG" alt="">
+        </div>
+        <!-- 縮圖 -->
+        <!-- 若是縮圖要放在左邊，須放在大圖上 -->
+        <div class="picS">
+
+            <!-- <img onclick="swap('../image/03f01617946e73cbcb2259e47a4a69ca.png');" class="pic1" src="../image/03f01617946e73cbcb2259e47a4a69ca.png" alt="">
+            <img onclick="swap('../image/90766dcc8c0fe5e787017a23a5dac42f.png');" class="pic2" src="../image/90766dcc8c0fe5e787017a23a5dac42f.png" alt="">
+            <img onclick="swap('../image/f7c664394e9b3bec1961f29eb60842d7.png');" class="pic3" src="../image/f7c664394e9b3bec1961f29eb60842d7.png" alt="">
+        -->
+
+            <img onclick="swap(this.src);" src="../image/03f01617946e73cbcb2259e47a4a69ca.png" alt="">
+            <img onclick="swap(this.src);" src="../image/90766dcc8c0fe5e787017a23a5dac42f.png" alt="">
+            <img onclick="swap(this.src);" src="../image/f7c664394e9b3bec1961f29eb60842d7.png" alt="">
+
+        </div>
+
+    </div>
+
+    <script>
+        // 取得大圖
+        function swap(picSrc) {
+            // 取得大圖
+            let pic1 = document.getElementsByClassName('picL');
+            // picL.src = '../'
+            picL.src = picSrc;
+        }
+
+        // function swap1() {
+        //     // 取得縮圖1
+        //     picL.src = '../image/03f01617946e73cbcb2259e47a4a69ca.png'
+        // }
+        // function swap2() {
+        //         // 取得縮圖2
+        //         picL.src = '../image/90766dcc8c0fe5e787017a23a5dac42f.png'
+        //     }
+        //     function swap3() {
+        //         // 取得縮圖3
+        //         picL.src = '../image/f7c664394e9b3bec1961f29eb60842d7.png'
+        //     }
+
+    </script>
+</body>
+
+</html>
